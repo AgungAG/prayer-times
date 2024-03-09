@@ -27,11 +27,12 @@ function prayerTimes(latitude, longitude) {
 }
 
 function success(position) {
-    console.log(position.coords.latitude, position.coords.longitude);
+    prayerTimes(position.coords.latitude, position.coords.longitude);
 }
 
 function error() {
-    alert('Posisi tidak dapat di akses')
+    //default menggunakan latitude dan longitude jakarta
+    prayerTimes('-6.121435','106.774124');
 }
 
 function userLocation() {
