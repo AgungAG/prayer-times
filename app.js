@@ -4,6 +4,7 @@ function prayerTimes(latitude, longitude) {
     .then(function(response){
         let date        = new Date();
         let today       = date.getDate();
+        let data        = response.data[0].timings;
 
         let app         = document.getElementById('app');
         let table       = document.createElement('table');
@@ -39,7 +40,7 @@ function userLocation() {
     if(!navigator.geolocation) {
         alert('Geolocation tidak di dukung di dalam browser anda, silahkan gunakan browser lain')
     } else {
-        navigator.geolocation.getCurrentPosition(success. error);
+        navigator.geolocation.getCurrentPosition(success, error);
     }
 }
 
